@@ -114,9 +114,12 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
-// Step 1 (Part 1)
+
+// Step 1 (Part 1) - created a component function called 'articleMaker' that takes in an object
 function articleMaker(articleObj){
-  // Step 1 (Part 2)
+  
+  // Step 1 (Part 2) - Creating the article object 
+  // these are just creating the outline of the object and saving them into variables to use later on  
   const article = document.createElement('div')
   const articleTitle = document.createElement('h2')
   const articleDate = document.createElement('p')
@@ -125,6 +128,7 @@ function articleMaker(articleObj){
   const articleParagraph3 = document.createElement('p')
   const articleExpandButton = document.createElement('span')
 
+  // this step is just appending all the data into one object called 'article' 
   article.appendChild(articleTitle)
   article.appendChild(articleDate)
   article.appendChild(articleParagraph1)
@@ -132,10 +136,12 @@ function articleMaker(articleObj){
   article.appendChild(articleParagraph3)
   article.appendChild(articleExpandButton)
 
+  // this step is adding class names to each of these objects 
   article.classList.add('article')
   articleDate.classList.add('date')
   articleExpandButton.classList.add('expandButton')
 
+  // this step is going through and adding text content to show up on the page
   articleTitle.textContent = articleObj.title;
   articleDate.textContent = articleObj.date;
   articleParagraph1.textContent = articleObj.firstParagraph;
@@ -143,15 +149,19 @@ function articleMaker(articleObj){
   articleParagraph3.textContent = articleObj.thirdParagraph;
   articleExpandButton.textContent = 'expand';
 
-  // Step 2
+  // Step 2 - the event listener waits for a click event to happen, and when 
+  // the expand button is clicked, it will expand and show the article
   articleExpandButton.addEventListener('click', event => article.classList.toggle('article-open'))
 
-  // Step 3
+  // Step 3 - returns 'article' because that is the name of the object we created and appended all of the other elements too
   return article
 }
 
-// Step 4
+// Step 4 - loops over the data object. Each iteration through prints the article on the page, in this case there are 4.
+// Then, I create an article element and append it to the DOM inside the div 'articles' (found in index.html)
 data.forEach(dataObj => {
   const article = articleMaker(dataObj);
   document.querySelector('.articles').appendChild(article);
 })
+
+// Step 5
