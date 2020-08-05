@@ -125,9 +125,33 @@ function articleMaker(articleObj){
   const articleParagraph3 = document.createElement('p')
   const articleExpandButton = document.createElement('span')
 
+  article.appendChild(articleTitle)
+  article.appendChild(articleDate)
+  article.appendChild(articleParagraph1)
+  article.appendChild(articleParagraph2)
+  article.appendChild(articleParagraph3)
+  article.appendChild(articleExpandButton)
+
+  article.classList.add('article')
+  articleDate.classList.add('date')
+  articleExpandButton.classList.add('expandButton')
+
+  articleTitle.textContent = articleObj.title;
+  articleDate.textContent = articleObj.date;
+  articleParagraph1.textContent = articleObj.firstParagraph;
+  articleParagraph2.textContent = articleObj.secondParagraph;
+  articleParagraph3.textContent = articleObj.thirdParagraph;
+  articleExpandButton.textContent = 'expand';
+
   // Step 2
-  
+  articleExpandButton.addEventListener('click', event => article.classList.toggle('article-open'))
 
   // Step 3
   return article
 }
+
+// Step 4
+data.forEach(dataObj => {
+  const article = articleMaker(dataObj);
+  document.querySelector('.articles').appendChild(article);
+})
