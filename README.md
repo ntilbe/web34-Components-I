@@ -39,15 +39,15 @@ In this project we are going to be building a news feed reader. The goal is to h
 
 ### Part 2: Add Articles
 
-* Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles. Write the code once and add as many components as you want all while maintaining the functionality we built!
+*[X] Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles. Write the code once and add as many components as you want all while maintaining the functionality we built!
 
 ### Part 3: The Menu
 
-* Follow the instructions found in the Menu.js file to complete the JavaScript functionality.
+*[ ] Follow the instructions found in the Menu.js file to complete the JavaScript functionality.
 
 ### Part 4: Exit Ticket
 
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/wJnnCcg7nzMWbuptD/uZmuwFasNH3WoC).
+[ ] Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/wJnnCcg7nzMWbuptD/uZmuwFasNH3WoC).
 
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
 
